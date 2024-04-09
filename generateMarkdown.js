@@ -33,12 +33,42 @@ Link: ${renderLicenseLink(license)}
 function generateMarkdown(data) {
   return `
 # ${data.title}
-## Project Desription
+
+
+## Project Description
 
   ${data.description}
 
-   ${renderLicenseSection(data.license)}
+## Table of Contents
+
+${data.table}
+
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+${renderLicenseSection(data.license)}
+
+## How To Contribute
+
+${data.contributing}
+
+## Tests
+
+${data.tests}
+
+## Questions
+
+${data.questions}
+
+  Github: https://github.com/${data.github}
+  Email: ${data.email}
 `;
 }
+
 
 module.exports = generateMarkdown;
